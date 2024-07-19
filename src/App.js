@@ -6,8 +6,15 @@ export default function App() {
   let [show, setShow] = useState(false);
   return (
     <>
+      <button
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        Toggle
+      </button>
+
       <div>{show ? <ProgressBar /> : ""}</div>
-      <button onClick={() => setShow(!show)}>Toggle</button>
     </>
   );
 }
